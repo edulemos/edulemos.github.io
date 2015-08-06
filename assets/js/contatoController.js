@@ -6,7 +6,7 @@ app.controller('contatoController', ['$scope','$http', function($scope, $http) {
 
 	$scope.enviaEmail = function() {
 
-		$http.get('http://localhost:8080/rest-ws/enviarEmail'+$scope.contato)
+		$http.get('http://rest-ws.elasticbeanstalk.com/enviarEmail'+$scope.contato)
 		.success(
 			function(data) {
 				alert('Email Enviado.');
