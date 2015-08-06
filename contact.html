@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,11 +17,10 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
 
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
  
   </head>
 
-  <body>
+  <body  ng-controller="contatoController">
 
     <!-- Static navbar -->
 	<div class="navbar navbar-inverse navbar-static-top">
@@ -56,10 +55,10 @@
 	
 	<!-- +++++ Contact Section +++++ -->
 	
-	<div class="container pt">
+	<div class="container pt" >
 		<div class="row mt">
 			<div class="col-lg-6 col-lg-offset-3 centered">
-				<h1>CONTATO</h1>
+				<h1>CONTATO</h1>				
 				<hr>				
 			</div>
 		</div>
@@ -67,24 +66,33 @@
 			<div class="col-lg-8 col-lg-offset-2">
 				<form role="form">
 				  <div class="form-group">
-				    <input type="name" class="form-control" id="NameInputEmail1" placeholder="Nome">
+				    <label>Nome:</label>
+				    <input type="text" class="form-control"  placeholder="Nome" ng-model="contato.nome">
 				    <br>
 				  </div>
 				  <div class="form-group">
-				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+				  	<label>Email:</label>
+				    <input type="email" class="form-control"  placeholder="Email" ng-model="contato.email">
 				    <br>
 				  </div>
 				  <div class="form-group">
-				    <input type="email" class="form-control" id="subjectEmail1" placeholder="Assunto">
+				  	<label>Assunto:</label>
+				    <input type="text" class="form-control"  placeholder="Assunto" ng-model="contato.assunto">
 				    <br>
 				  </div>
-				  <textarea class="form-control" rows="6" placeholder="Texto"></textarea>
+				  <label>Texto:</label>
+				  <textarea class="form-control" rows="6" placeholder="Texto" ng-model="contato.texto"></textarea>
 				    <br>
-				  <button type="submit" class="btn btn-success">ENVIAR</button>
+				  <button  class="btn btn-success" ng-click="enviaEmail()">ENVIAR</button>
 				</form>    			
 			</div>
+			
+			
+			
 		</div><!-- /row -->
 	</div><!-- /container -->
+	
+	
 	
 	
 	<!-- +++++ Footer Section +++++ -->
@@ -107,6 +115,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/contatoController.js"></script>
   </body>
 </html>
