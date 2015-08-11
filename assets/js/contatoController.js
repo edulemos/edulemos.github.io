@@ -12,7 +12,7 @@ app.controller('contatoController', ['$scope','$http', function($scope, $http) {
 	
 	$scope.enviaEmail = function() {
 
-		$http.get('http://rest-ws.elasticbeanstalk.com/enviarEmail'+$scope.contato)
+		$http.post('http://localhost:8080/servicos-rest-ws/enviarEmail', $scope.contato)
 		.success(
 			function(data) {
 				$scope.msgok = true;
