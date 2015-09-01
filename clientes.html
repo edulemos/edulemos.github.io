@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br" ng-app="app">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,58 +9,61 @@
     <meta name="author" content="EDUARDO LEMOS">
 
     <title>EDUARDO LEMOS</title>
-	
-	   <!-- Bootstrap core CSS -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<!-- Custom styles for this template -->
-	<link href="css/main.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen" />
-	<link href="css/jquery.toastmessage-min.css" rel="stylesheet" type="text/css" media="screen" />
 
-	<script type="text/javascript" src="js/angular.min.js"></script>
-	<script type="text/javascript" src="js/angular-route.min.js"></script>
-	<script type="text/javascript" src="js/angular-locale_pt-br.js"></script>
-	<script type="text/javascript" src="js/ngMask.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="css/jquery.toastmessage-min.css" rel="stylesheet" type="text/css" media="screen" />
 
-	<script type="text/javascript" src="js/angular/app.js"></script>
-	<script type="text/javascript" src="js/angular/config/config.js"></script>
-	<script type="text/javascript" src="js/angular/config/route-config.js"></script>
-	<script type="text/javascript" src="js/angular/controller/cadastroClienteCtrl.js"></script>
-	<script type="text/javascript" src="js/angular/services/clienteService.js"></script>
-	<script type="text/javascript" src="js/angular/diretivas/confirm.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/angular-locale_pt-br.js"></script>
+    <script type="text/javascript" src="js/ngMask.js"></script>
 
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/jquery.toastmessage-min.js"></script>
-	<script type="text/javascript" src="js/alert.js"></script>
+    <script type="text/javascript" src="js/angular/app.js"></script>
+    <script type="text/javascript" src="js/angular/config/config.js"></script>
+    <script type="text/javascript" src="js/angular/config/route-config.js"></script>
+    <script type="text/javascript" src="js/angular/controller/cadastroClienteCtrl.js"></script>
+    <script type="text/javascript" src="js/angular/services/clienteService.js"></script>
+    <script type="text/javascript" src="js/angular/diretivas/confirm.js"></script>
 
- 
-  </head>
-
-  <body>
-
-  <div ng-include="'template/header.html'"></div>
-	
-	<!-- +++++ Contact Section +++++ -->
-	
-	<div class="container pt" >
-		<div class="row mt">
-			<div class="col-lg-6 col-lg-offset-3 centered">
-				<h1>CADASTRO DE CLIENTES</h1>				
-				<hr>				
-			</div>
-		</div>
-		<div class="row mt">	
-			<div class="col-lg-8 col-lg-offset-2">			
-			     <div ng-view></div>			
-			</div>			
-		</div><!-- /row -->
-	</div><!-- /container -->
-	
-	<!-- +++++ Footer Section +++++ -->
-	
-	<div ng-include="'template/footer.html'"></div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.toastmessage-min.js"></script>
+    <script type="text/javascript" src="js/alert.js"></script>
 
 
-  </body>
+</head>
+
+<body>
+
+    <div ng-include="'template/header.html'"></div>
+
+    <!-- +++++ Contact Section +++++ -->
+
+    <div class="container pt">
+        <div class="row mt">
+            <div class="col-lg-6 col-lg-offset-3 centered">
+                <h1>CADASTRO DE CLIENTES</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row mt">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div ng-view></div>
+            </div>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+
+    <!-- +++++ Footer Section +++++ -->
+
+    <div ng-include="'template/footer.html'"></div>
+
+
+</body>
+
 </html>
