@@ -1,0 +1,62 @@
+body {
+	margin-top: 5px;
+}
+
+fieldset {
+	padding: 5px;
+}
+
+.jumbotron {
+	padding: 20px;
+}
+
+legend {
+	background-color: #0C86AE;
+	color: white;
+	padding: 5px;
+	font-size: large;
+	font-weight: bold;
+}
+
+.header {
+	background-color: #0C86AE;
+	color: white;
+	padding: 5px;
+}
+
+.container {
+	margin: 0 auto;
+}
+
+
+.titulo {
+	font-size: x-large;
+	font-weight: bold;
+}
+
+input.ng-invalid.ng-touched{
+	border-color: red;
+   	
+}
+
+input.ng-valid.ng-touched{
+   border-color:  green;	
+}
+
+.classNg{
+	font-size: 50px;
+	color: red;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.selecionado{
+	background-color: yellow;
+}
+
+.div-error {
+	color: red;
+	font-weight: bold;
+}

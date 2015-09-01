@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="pt-br" ng-app="app">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,19 +8,35 @@
     <meta name="author" content="EDUARDO LEMOS">
 
     <title>EDUARDO LEMOS</title>
-
-	<script type="text/javascript" src="js/angular.min.js"></script>
 	
 	   <!-- Bootstrap core CSS -->
 	<link href="css/bootstrap.css" rel="stylesheet">
-
 	<!-- Custom styles for this template -->
 	<link href="css/main.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="css/jquery.toastmessage-min.css" rel="stylesheet" type="text/css" media="screen" />
+
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.min.js"></script>
+	<script type="text/javascript" src="js/angular-locale_pt-br.js"></script>
+	<script type="text/javascript" src="js/ngMask.js"></script>
+
+	<script type="text/javascript" src="js/app/app.js"></script>
+	<script type="text/javascript" src="js/app/config/config.js"></script>
+	<script type="text/javascript" src="js/app/config/route-config.js"></script>
+	<script type="text/javascript" src="js/app/controller/cadastroClienteCtrl.js"></script>
+	<script type="text/javascript" src="js/app/services/clienteService.js"></script>
+	<script type="text/javascript" src="js/app/diretivas/confirm.js"></script>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/toast/jquery.toastmessage-min.js"></script>
+	<script type="text/javascript" src="js/toast/alert.js"></script>
 
  
   </head>
 
-  <body  ng-controller="contatoController">
+  <body>
 
     <!-- Static navbar -->
 	<div class="navbar navbar-inverse navbar-static-top">
@@ -47,8 +63,7 @@
 				<ul class="nav navbar-nav navbar-right" style="font-size: large;font-weight: bold;">
 					<li><a href="index.html">Home</a></li>
 					<li><a href="contact.html">Contato</a></li>
-					<li><a href="clientes.html#/lista-clientes">Cadastro Clientes</a></li>
-
+					<li><a href="clientes.html#/lista-clientes">Cadastro Clientes</a></li>	
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
@@ -60,40 +75,16 @@
 	<div class="container pt" >
 		<div class="row mt">
 			<div class="col-lg-6 col-lg-offset-3 centered">
-				<h1>CONTATO</h1>				
+				<h1>CADASTRO DE CLIENTES</h1>				
 				<hr>				
 			</div>
 		</div>
 		<div class="row mt">	
 			<div class="col-lg-8 col-lg-offset-2">
-			<div class="alert alert-info" ng-show="msgok">
-  				{{msg}}
-			</div>
-			<div class="alert alert-danger" ng-show="msgnok">
-  				{{msg}}
-			</div>
-				<form role="form" name="contatoForm">
-				  <div class="form-group">
-				    <label>Nome:</label>
-				    <input type="text" class="form-control"  placeholder="Nome" ng-model="contato.nome"	ng-required="true">
-				    <br>
-				  </div>
-				  <div class="form-group">
-				  	<label>Email:</label>
-				    <input type="email" class="form-control"  placeholder="Email" ng-model="contato.email" ng-required="true">
-				    <br>
-				  </div>
-				  <div class="form-group">
-				  	<label>Assunto:</label>
-				    <input type="text" class="form-control"  placeholder="Assunto" ng-model="contato.assunto" ng-required="true">
-				    <br>
-				  </div>
-				  <label>Texto:</label>
-				  <textarea class="form-control" rows="6" placeholder="Texto" ng-model="contato.texto" ng-required="true"></textarea>
-				    <br>
-				  <button  class="btn btn-success" ng-click="enviaEmail()" ng-disabled="contatoForm.$invalid">ENVIAR</button>
-				  <div style="margin-top: 5px;" ng-show="contatoForm.$invalid">Preencha todos os campos corretamente.</div>
-				</form>    			
+			
+			<div ng-view></div>
+
+			
 			</div>
 			
 			
@@ -119,13 +110,6 @@
 		
 		</div>
 	</div>
-	
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/app/controller/contatoController.js"></script>
   </body>
 </html>
