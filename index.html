@@ -1,55 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="EDUARDO LEMOS">
-<title>EDUARDO LEMOS</title>
+<html lang="pt-br" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="EDUARDO LEMOS">
 
-<!-- Bootstrap core CSS -->
-<link href="css/bootstrap.css" rel="stylesheet">
+    <title>EDUARDO LEMOS</title>
+	
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">	
+	<script type="text/javascript" src="js/angular.min.js"></script>	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	
+  </head>
 
-<!-- Custom styles for this template -->
-<link href="css/main.css" rel="stylesheet">
-<script type="text/javascript" src="js/jquery.js"></script>
+  <body>
 
-</head>
-
-<body>
-
-	<!-- Static navbar -->
-	<div class="navbar navbar-inverse navbar-static-top">
-		<div class="container">
-			<div class="navbar-header">
-				<div class="row">
-					<div class="col-md-3">
-						<img src="img/user.jpg" class="img-circle"
-							alt="Eduardo Lemos">
-					</div>
-					<div class="col-md-3">
-						<h1 style="color: white;">EDUARDO LEMOS</h1>
-					</div>
-					<div class="col-md-3">
-						<img src="img/java.jpg" class="img-responsive" alt="java">
-					</div>
-					<div class="col-md-3">
-						<h1 style="color: white;">JAVA DEVELOPER</h1>
-					</div>
-				</div>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav navbar-right"
-					style="font-size: large; font-weight: bold;">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="contact.html">Contato</a></li>
-                    <li><a href="clientes.html#/lista-clientes">Crud Angular</a></li>	
-				</ul>
-			</div>
-			<!--/.nav-collapse -->
-		</div>
-	</div>
+  <div ng-include="'template/header.html'"></div>
 
 	<!-- +++++ Projects Section +++++ -->
 
@@ -205,22 +175,8 @@
 
 	<!-- +++++ Footer Section +++++ -->
 
-	<div id="footer">
-		<div class="container">
-			<div class="row">
-			<div class="col-lg-7">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.453064567712!2d-43.22142100000003!3d-22.8966541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997ee5ccbeb7cd%3A0xdb51de4fbe5d95ed!2sCampo+de+S%C3%A3o+Crist%C3%B3v%C3%A3o%2C+Rio+de+Janeiro+-+RJ!5e0!3m2!1spt-BR!2sbr!4v1438872053346" width="500" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>		
-			</div>			
-			<div class="col-lg-5">
-				<h1 style="color: white;">RIO DE JANEIRO - RJ</h1>		
-			</div>			
-			</div>		
-		</div>
-	</div>
+  <div ng-include="'template/footer.html'"></div>
 
-	<!-- Bootstrap core JavaScript
-    ================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script>var app = angular.module('app',[]);</script>    
 </body>
 </html>

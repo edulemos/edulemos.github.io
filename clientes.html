@@ -10,7 +10,7 @@
     <title>EDUARDO LEMOS</title>
 	
 	   <!-- Bootstrap core CSS -->
-	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<!-- Custom styles for this template -->
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen" />
@@ -21,54 +21,24 @@
 	<script type="text/javascript" src="js/angular-locale_pt-br.js"></script>
 	<script type="text/javascript" src="js/ngMask.js"></script>
 
-	<script type="text/javascript" src="js/app/app.js"></script>
-	<script type="text/javascript" src="js/app/config/config.js"></script>
-	<script type="text/javascript" src="js/app/config/route-config.js"></script>
-	<script type="text/javascript" src="js/app/controller/cadastroClienteCtrl.js"></script>
-	<script type="text/javascript" src="js/app/services/clienteService.js"></script>
-	<script type="text/javascript" src="js/app/diretivas/confirm.js"></script>
+	<script type="text/javascript" src="js/angular/app.js"></script>
+	<script type="text/javascript" src="js/angular/config/config.js"></script>
+	<script type="text/javascript" src="js/angular/config/route-config.js"></script>
+	<script type="text/javascript" src="js/angular/controller/cadastroClienteCtrl.js"></script>
+	<script type="text/javascript" src="js/angular/services/clienteService.js"></script>
+	<script type="text/javascript" src="js/angular/diretivas/confirm.js"></script>
 
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/toast/jquery.toastmessage-min.js"></script>
-	<script type="text/javascript" src="js/toast/alert.js"></script>
+	<script type="text/javascript" src="js/jquery.toastmessage-min.js"></script>
+	<script type="text/javascript" src="js/alert.js"></script>
 
  
   </head>
 
   <body>
 
-    <!-- Static navbar -->
-	<div class="navbar navbar-inverse navbar-static-top">
-		<div class="container">
-			<div class="navbar-header">
-				<div class="row">
-					<div class="col-md-3">
-						<img src="img/user.jpg" class="img-circle"
-							alt="Eduardo Lemos">
-					</div>
-					<div class="col-md-3">
-						<h1 style="color: white;">EDUARDO LEMOS</h1>
-					</div>
-					<div class="col-md-3">
-						<img src="img/java.jpg" class="img-responsive"
-							alt="java">
-					</div>
-					<div class="col-md-3">
-						<h1 style="color: white;">JAVA DEVELOPER</h1>
-					</div>
-				</div>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav navbar-right" style="font-size: large;font-weight: bold;">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="contact.html">Contato</a></li>
-					<li><a href="clientes.html#/lista-clientes">Cadastro Clientes</a></li>	
-				</ul>
-			</div>
-			<!--/.nav-collapse -->
-		</div>
-	</div>
+  <div ng-include="'template/header.html'"></div>
 	
 	<!-- +++++ Contact Section +++++ -->
 	
@@ -80,36 +50,16 @@
 			</div>
 		</div>
 		<div class="row mt">	
-			<div class="col-lg-8 col-lg-offset-2">
-			
-			<div ng-view></div>
-
-			
-			</div>
-			
-			
-			
+			<div class="col-lg-8 col-lg-offset-2">			
+			     <div ng-view></div>			
+			</div>			
 		</div><!-- /row -->
 	</div><!-- /container -->
 	
-	
-	
-	
 	<!-- +++++ Footer Section +++++ -->
 	
-	<div id="footer">
-		<div class="container">
-			<div class="row">
-			<div class="col-lg-7">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.453064567712!2d-43.22142100000003!3d-22.8966541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997ee5ccbeb7cd%3A0xdb51de4fbe5d95ed!2sCampo+de+S%C3%A3o+Crist%C3%B3v%C3%A3o%2C+Rio+de+Janeiro+-+RJ!5e0!3m2!1spt-BR!2sbr!4v1438872053346" width="500" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>		
-			</div>			
-			<div class="col-lg-5">
-				<h1 style="color: white;">RIO DE JANEIRO - RJ</h1>		
-			</div>			
-			</div>
-		
-		</div>
-	</div>
+	<div ng-include="'template/footer.html'"></div>
+
 
   </body>
 </html>

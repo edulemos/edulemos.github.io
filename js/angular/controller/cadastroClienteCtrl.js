@@ -4,8 +4,6 @@ function cadastroClientesCtrl($scope, $location, clienteService, cliente, client
 	$scope.cliente = cliente.data;
 	$scope.clientes = clientes.data;
 	$scope.estados = estados.data;
-    
-    console.log('iniciou o controller');
     	
 	/*GRAVA CLIENTE*/
 	$scope.gravaCliente = function() {		
