@@ -9,7 +9,7 @@
 
 .toast-item {
 	height: auto;
-	background: #337AB7;
+	background: #104E8B;
 	opacity: .9;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -75,7 +75,7 @@
 }
 
 .toast-type-warning {
-	background:#337AB7;
+	background:#104E8B;
 	color: white;	
 	border-color: white;
 	font-weight: bold;
