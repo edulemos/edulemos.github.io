@@ -9,7 +9,7 @@
 
 .toast-item {
 	height: auto;
-	background: #065A80;
+	background: #337AB7;
 	opacity: .9;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -20,6 +20,7 @@
 	padding-right: 6px;
 	font-family: lucida Grande;
 	font-size: 14px;
+    font-weight: bold;
 	border: 2px solid #999;
 	display: block;
 	position: relative;
