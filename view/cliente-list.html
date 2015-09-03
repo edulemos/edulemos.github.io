@@ -1,13 +1,15 @@
 <div ng-class="alertClass" style="margin-bottom: 15px; text-transform: uppercase; font-weight: bold;" ng-show="flash.getMessage()">
     {{flash.getMessage()}}
 </div>
-<a href="#/form-cliente">
-    <button class="btn btn-primary">CADASTRAR</button>
-</a>
+
+  <a href="#/form-cliente" style="float:right;">
+   <img src="./img/add-icon.png" alt="Incluir" />CADASTRAR
+  </a>
 <br>
-<br>
+
 <label>Pesquisar:</label>
-<input type="text" ng-model="criterioDeBusca" class="form-control" placeholder="Digite o termo para pesquisar" />
+<input type="text" ng-model="criterioDeBusca" class="form-control" placeholder="Digite o termo a pesquisar" />
+
 <br>
 
 <table class="table table-striped">
@@ -21,9 +23,11 @@
         <td>{{c.telefone}}</td>
         <td>
             <a href="#form-cliente/{{c.id}}">
-                <button class="btn btn-primary">EDITAR</button>
+               <img src="./img/edit-icon.png" alt="Editar"/>
             </a>
-            <button class="btn btn-primary" ng-click="removerCliente(c)" confirmation-needed="Confirma a exclus&atilde;o do cliente {{c.nome}}?">EXCLUIR</button>
+            <a href="#lista-clientes">
+               <img src="./img/delete-icon.png" alt="Excluir" ng-click="removerCliente(c)" confirmation-needed="Confirma a exclus&atilde;o do cliente {{c.nome}}?"/>
+            </a>
         </td>
     </tr>
 </table>
