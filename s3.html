@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="appS3">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="EDUARDO LEMOS">
+
+    <title>EDUARDO LEMOS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/jquery.toastmessage-min.css" rel="stylesheet" type="text/css" media="screen" />
+
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/angular-locale_pt-br.js"></script>
+    <script type="text/javascript" src="js/angular/appS3.js"></script>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+</head>
+
+<body ng-controller="S3Controller">
+
+    <div ng-include="'template/header.html'"></div>
+
+    <!-- +++++ Contact Section +++++ -->
+
+    <div class="container pt" style="padding:0px;">
+        <div class="row mt">
+            <div class="col-lg-6 col-lg-offset-3 centered">
+                <h1>AWS S3</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row mt">
+            <div class="col-lg-8 col-lg-offset-2">
+
+                <h2>Buckets</h2>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Detalhes</th>
+                    </tr>
+                    <tr ng-repeat="b in buckets">
+                        <td>{{b.name}}</td>
+                        <td><a href="#" ng-click="bucketSummary(b.name)">detalhes</a></td>
+                    </tr>
+                </table>
+
+                <h2>Buckets Summary</h2>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Link</th>
+                    </tr>
+                    <tr ng-repeat="bs in bucketSummaryList">
+                        <td>{{bs.key}}</td>
+                        <td><a href="#" ng-click="bucketSummaryLink(bs)">link</a></td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+
+    <!-- +++++ Footer Section +++++ -->
+
+    <div ng-include="'template/footer.html'"></div>
+
+
+</body>
+
+</html>
