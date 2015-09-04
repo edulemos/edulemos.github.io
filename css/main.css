@@ -141,8 +141,6 @@ a:after {
 
 #footer {
 	background-color: #104E8B;
-	padding-top: 50px;
-	padding-bottom: 50px; 
 }
 
 #footer p {
@@ -231,3 +229,5 @@ bt {
 	font-size: 40px;
 	color: #337AB7;
 }
+
+#div-content { min-height: 500px; }

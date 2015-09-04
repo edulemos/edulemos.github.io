@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" ng-app="app">
+<html lang="pt-br" ng-app="appS3">
 
 <head>
     <meta charset="utf-8">
@@ -10,20 +10,29 @@
 
     <title>EDUARDO LEMOS</title>
 
+    <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
     <link href="css/main.css" rel="stylesheet">
+    <link href="css/jquery.toastmessage-min.css" rel="stylesheet" type="text/css" media="screen" />
+
     <script type="text/javascript" src="js/angular.min.js"></script>
-    <script type="text/javascript" src="js/angular/controller/contatoController.js"></script>
+    <script type="text/javascript" src="js/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/angular-locale_pt-br.js"></script>
+    <script type="text/javascript" src="js/angular/appS3.js"></script>
+
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 </head>
 
-<body ng-controller="contatoController">
+<body ng-controller="S3Controller">
 
     <div ng-include="'template/header.html'"></div>
 
-    <div class="container pt">
+    <!-- +++++ Contact Section +++++ -->
+
+    <div class="container pt" style="padding:0px;">
         <div class="row mt">
             <div class="col-lg-6 col-lg-offset-3 centered">
                 <h1>CONTATO</h1>
@@ -31,7 +40,7 @@
             </div>
         </div>
         <div class="row mt">
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="col-lg-8 col-lg-offset-2" id="div-content">
                 <div class="alert alert-info" ng-show="msgok">
                     {{msg}}
                 </div>
