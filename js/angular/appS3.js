@@ -10,7 +10,7 @@ function S3ControllerFunction($scope, $http) {
     $scope.bucketSummaryList = [];
 
     var carregaBuckets = function () {
-        $http.get("http://rest-ws.elasticbeanstalk.com/s3buckets")
+        $http.get("http://54.232.208.198:8080/rest/s3buckets")
             .success(function (data) {
                 $scope.buckets = data;
             }).error(function (data) {
@@ -19,7 +19,7 @@ function S3ControllerFunction($scope, $http) {
     }
 
     $scope.bucketSummary = function (nome) {
-        $http.get("http://rest-ws.elasticbeanstalk.com/bucketListFiles/" + nome)
+        $http.get("http://54.232.208.198:8080/rest/bucketListFiles/" + nome)
             .success(function (data) {
                 $scope.bucketSummaryList = data;
             }).error(function (data) {
@@ -28,7 +28,7 @@ function S3ControllerFunction($scope, $http) {
     }
 
     $scope.bucketSummaryLink = function (bs) {
-        $http.post("http://rest-ws.elasticbeanstalk.com/linkDownload", bs)
+        $http.post("http://54.232.208.198:8080/rest/linkDownload", bs)
             .success(function (data) {
                 window.open(data, 'Download');
             }).error(function (data) {
