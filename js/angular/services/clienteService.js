@@ -9,7 +9,7 @@ app.factory("clienteService",function($http, config){
 	};
 	
 	var _adicionarCliente = function (cliente) {
-		return $http.post(config.baseUrl + "/adicionarCliente", cliente);
+		return $http.post(config.baseUrl + "/gravarCliente", cliente);
 	};
 	
 	var _excluirCliente = function (cliente) {
