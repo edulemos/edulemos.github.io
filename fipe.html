@@ -39,7 +39,7 @@
 			<div class="col-md-4">
 
 				<label>SELECIONE A MARCA</label>
-				<ui-select allow-clear="true" ng-model="marca" on-select="consultarVeiculos($item)">
+				<ui-select ng-model="veiculo.marca" on-select="consultarVeiculos($item)">
 					<ui-select-match>
 						{{$select.selected.name}}
 					</ui-select-match>
@@ -53,7 +53,7 @@
 			<div class="col-md-4">
 
 				<label>SELECIONE O MODELO</label>
-				<ui-select allow-clear="true" ng-model="modelo" on-select="consultarModelos($item)">
+				<ui-select ng-model="veiculo.modelo" on-select="consultarModelos($item)">
 					<ui-select-match>
 						{{$select.selected.name}}
 					</ui-select-match>
@@ -67,7 +67,7 @@
 			<div class="col-md-4">
 
 				<label>SELECIONE O ANO DO MODELO</label>
-				<ui-select allow-clear="true" ng-model="anoModelo" on-select="consultarPreco($item)">
+				<ui-select ng-model="veiculo.ano" on-select="consultarPreco($item)">
 					<ui-select-match>
 						{{$select.selected.name}}
 					</ui-select-match>
