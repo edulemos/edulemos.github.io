@@ -43,7 +43,7 @@
 					<ui-select-match>
 						{{$select.selected.name}}
 					</ui-select-match>
-					<ui-select-choices repeat="item in (marcas | orderBy: 'name' | filter: $select.search) track by item.id">
+					<ui-select-choices repeat="item in marcas | orderBy: 'name' | filter: $select.search">
 						<span ng-bind="item.name"></span>
 					</ui-select-choices>
 				</ui-select>
@@ -57,7 +57,7 @@
 					<ui-select-match>
 						{{$select.selected.name}}
 					</ui-select-match>
-					<ui-select-choices repeat="item in (modelos | orderBy: 'name' | filter: $select.search) track by item.id">
+					<ui-select-choices repeat="item in modelos | orderBy: 'name' | filter: $select.search">
 						<span ng-bind="item.name"></span>
 					</ui-select-choices>
 				</ui-select>
@@ -71,7 +71,7 @@
 					<ui-select-match>
 						{{$select.selected.name}}
 					</ui-select-match>
-					<ui-select-choices repeat="item in (anoModelos | orderBy: 'name' | filter: $select.search) track by item.id">
+					<ui-select-choices repeat="item in anoModelos | orderBy: 'name' | filter: $select.search">
 						<span ng-bind="item.name"></span>
 					</ui-select-choices>
 				</ui-select>
@@ -80,7 +80,7 @@
 
 		</div>
 
-		<div class="well" ng-show="consultaFeita">
+		<div class="well">
 
 			<fieldset>
 

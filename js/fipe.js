@@ -1,21 +1,5 @@
 var app = angular.module("app", ['ui.select', 'ngSanitize']);
 
-app.directive('resetsearchmodel', [resetSearchModel])
-
-function resetSearchModel() {
-	return {
-		restrict: 'A',
-		require: ['^ngModel', 'uiSelect'],
-		link: function (scope, element, attrs, ctrls) {
-			scope.$watch(attrs.ngModel, function (newval, oldval, scope) {
-				if (newval != undefined && newval.length < 1) {
-					scope.$select.selected = undefined;
-				}
-			});
-		}
-	};
-}
-
 app.controller('ctrl', ['$scope', '$http', function ($scope, $http) {
 
 	$scope.marcas = [];
@@ -35,8 +19,7 @@ app.controller('ctrl', ['$scope', '$http', function ($scope, $http) {
 	$scope.consultarVeiculos = function (marcaSelecionada) {
 
 		$scope.marca = marcaSelecionada;
-		$scope.dadosFipe = {};
-		$scope.consultaFeita = false;
+		$scope.dadosFipe = {marca:marcaSelecionada.name};
 		$scope.veiculo = {
 			modelo: '',
 			ano: ''
@@ -53,7 +36,7 @@ app.controller('ctrl', ['$scope', '$http', function ($scope, $http) {
 	$scope.consultarModelos = function (modeloSelecionado) {
 
 		$scope.modelo = modeloSelecionado;
-		$scope.consultaFeita = false;
+		$scope.dadosFipe = {marca: $scope.marca.name , veiculo:modeloSelecionado.name};
 		$scope.veiculo = {
 			marca: $scope.marca,
 			modelo: modeloSelecionado,
