@@ -1,5 +1,5 @@
 app.value("config",{
 
-	baseUrl: "http://54.94.133.63:8080/rest"
+	baseUrl: "http://52.67.207.169:8080/rest"
 	
 });
